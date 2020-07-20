@@ -1,0 +1,107 @@
+$secondary: #033451;
+$primary:  #0394E9;  //#0275d8;
+$tertiary:#7E7E7E;
+$faint : whitesmoke;
+$grey-dark: #333;
+
+
+@mixin positioned-center($value:absolute,$top:50%,$left:50%,$x:-50%,$y:-50%){
+position:$value;
+top:$top;
+left:$left;
+transform:translate($x,$y);
+-webkit-transform: translate($x,$y);
+-moz-transform: translate($x,$y);
+-o-transform:translate($x,$y);
+};
+
+$widths:120,150,100,180;
+$fonts:13,20,18,16,22,14;
+
+$w-pct:80,90;
+
+$width:(
+    'w-120':120px,
+    'w-180':180px,
+    'w-100':100px,
+    'w-80':80px,
+    
+     '80-pct':80%,
+     'w-30':30px
+);
+ 
+
+@mixin btn-scaled( $width:map-get($width,'w-180'), $focused:false, $effect:0.99, $border-radius:32px ){
+    width:$width;
+    border-radius:$border-radius !important;
+    transition:transform 0.4s linear;
+    @if $focused {
+        transform:scale($effect);
+        transition:transform 0.4s linear;
+    }
+};
+
+
+@mixin cardRow($padding:10px,){
+    margin-top:20px;
+    padding:$padding;
+    width:98%;
+    margin:0 auto;
+    //border:2px solid red;
+    overflow-x:auto;
+
+    
+& .card__wrapper{
+    margin:5px;
+    min-width:280px;
+
+    
+    @include media(768px){
+        margin:10px;
+    }
+    
+}
+
+
+// styling scroll bar
+
+
+&::-webkit-scrollbar{
+    height: 5px;
+    width:5px;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      background:$primary;
+      border-radius:3px;
+    }
+
+    &::-webkit-scrollbar-button{
+        width:5px; height:5px; border-radius:50%; display:block;
+    }
+
+}
+
+
+
+@mixin scrollBar {
+
+    
+&::-webkit-scrollbar{
+    width: 5px;
+  height:20px;
+}
+ 
+
+&::-webkit-scrollbar-thumb {
+  background:$primary;
+  border-radius:3px;
+}
+
+
+&::-webkit-scrollbar-button{
+    width:5px; height:5px; border-radius:50%; display:block;
+}
+
+
+}

@@ -1,0 +1,257 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+ 
+
+.active-nav{
+    background:$primary;
+    color:#fff;
+}
+
+.nav-absolute{  
+    //  margin-top:-36px;
+    position:absolute;
+    width:100%;
+    //background:red;
+       z-index:500 ; 
+}
+
+.nav-fixed{  
+    //  margin-top:-36px;
+    position:fixed;
+    width:100%;
+    top:-50px;
+    transition:all 1s;
+       z-index:3000 ; 
+}
+
+.nav-t0{ top:0; }
+
+
+
+.nav-item{
+    background:none;
+    text-align:center;
+    color:$primary;
+    width:80px;
+    margin:5px;
+    //border:2px solid red; 
+
+    
+    // &:hover{
+    //     background:lighten($secondary,30%);
+      
+    //     &:hover > .nav-link{ color:#fff !important; }
+    // }
+}
+
+.nav-link:hover{
+  background:$primary;
+  color:#fff !important;
+}
+
+.nav-item.lmd,.nav-item.icon__btn{
+    
+    &:hover{
+        background:transparent;
+       
+    }
+}
+
+// .explore-nav{ 
+//   height:100%;
+//   width:100%;
+//   padding:10px;
+//  line-height:38px !important;
+//   &:hover{
+//       background:$primary;
+//       color:#fff !important;
+//   }
+//  }
+
+
+
+ .icon__btn{
+width:22px;
+z-index:2000;
+cursor:pointer;
+@include media(768px){
+    display:none;
+}
+ }
+
+  .navigation__icon{
+    @include positioned-center($value:relative);
+   z-index:1000;
+     cursor:pointer;
+      &,&::before,&::after{
+        width:22px;
+        height:3px;
+        display:block;
+        background:$primary !important;
+        z-index:1000;
+        border:0;
+        color:#fff;
+       transition:all .5s;
+      }
+
+      &::before,&::after{
+        content:'';
+        position:absolute;
+      }
+
+      &::before{
+         top:-8px;
+          
+        // background:blue;
+      }
+
+      &::after{
+         // background:pink;
+         top:8px;
+         
+      }
+
+  } //icon btn
+
+  .icon__btn:hover >  .navigation__icon::before{
+      top:-9px;
+  }
+
+ .icon__btn:hover > .navigation__icon::after{
+      top:9px;
+  }
+
+  .med-d,.sm-d,.n-d{
+display:none;
+  }
+ 
+  
+  .slog-md{
+      display:none;
+      @include media(640px){
+          display:block;
+      }
+      
+  }
+
+
+  .e{
+      display:none;
+      @include media(640px){
+          display:block;
+      }
+  }
+
+  .ln-d{
+      display:none;
+      @include media(1024px){
+          display:block;
+      }
+  }
+
+  .lmd{
+display:block;
+z-index:1000;
+cursor:pointer;
+@include media(1024px){
+    display:none;
+}
+  }
+ 
+.n-d{
+    @include media(768px){
+        display:block;
+    }
+}
+
+
+
+//SIDE NAV styles
+
+.sn-d{
+    @include media(640px){
+        display:none;
+    }
+}
+
+.se-d{
+    @include media(640px){
+        display: none;
+    }
+}
+
+.ssn-d{
+    @include media(640px){
+        display:block;
+    }
+}
+
+.sl-d{
+    display:none;
+    @include media(640px){
+  display:block;
+    }
+    .sl-d{
+        @include media(1024px){
+            display:none;
+        }
+    }
+}
+
+.navigation__width{
+    position:absolute;
+    width:100%;
+    overflow:hidden;
+    height:100vh;
+    z-index:500;
+    background:$secondary;
+    color:#fff;
+
+}
+  
+.navigation__nav{
+    position:absolute;
+    width:0;
+    overflow:hidden;
+    height:100vh;
+    z-index:4000;
+    background:$secondary;
+    color:#fff;
+   
+} 
+
+  .navigation__list{
+
+               @include positioned-center;
+               list-style   : none;
+               text-align   : center;
+  z-index:4000;
+            }
+
+            
+  .navigation__link{
+    width:200px;  
+   &:link,
+   &:visited {
+     display         : inline-block;
+     color           : #fff;
+     padding         : 1rem 2rem;
+     text-decoration : none;
+     text-transform  : uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $tertiary 50%);
+     background-size : 220%;
+     -webkit-transition      : all .3s;
+     transition      : all .3s;
+   }
+
+   &:active,
+   &:hover {
+     background-position: 100%;
+     color              : #fff;
+     -webkit-transform          : translateX(1rem);
+             transform          : translateX(1rem);
+   }
+
+ }
+   
+ 

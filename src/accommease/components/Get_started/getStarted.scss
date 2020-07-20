@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+
+.my-20{ margin:50px 0 !important; }
+
+@mixin indicator-styles{
+    height:5px;
+   border-radius:25px;
+     padding:3px;
+     margin:0 8px;
+     cursor:pointer; 
+}
+
+@mixin indicator($active:false, $bg:lighten(#000,60%)){
+    @if $active {
+        width:map-get($width,'w-30'); 
+        background:$bg; 
+        @include indicator-styles;
+    } @else{
+        width:map-get($width,'w-30'); 
+        background:$bg; 
+        @include indicator-styles;
+    }
+}
+
+
+.activeIndicator{ @include indicator($active:true,$bg:$primary) } 
+.indicator { @include indicator }
+
+
+.text-wrapped{
+ @include media($width:567px){
+  white-space:nowrap !important;
+  
+ }   
+}
+
+ .scaled-center{
+     text-align:center;
+     transform:scale(0.7) !important;
+ }
+
+ .img-scaled{
+     transform:scale(1.2,1.1) !important;
+     margin-bottom:20px;
+     @include media($width:768px){
+         transform:scale(1.8,1.3) !important;
+     }
+ }
+
+
+ .small-scale{
+    transform:scale(0.8) !important;
+    text-align:center;
+    margin-bottom:20px;
+ }
+
+ .diagonal-down {
+    transform:translate(110px,90px);
+    transition:transform 0.3s linear;
+}
+
+.translate-x{ transform:translateX(-100px); }
+
+
+
+
+ .sc{
+     transform:translateX(100px);
+ }

@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/queries';
+  
+.border-e-t{
+    border-bottom:1px solid $faint;
+    border-right:1px solid $faint;
+    border-left:1px solid $faint;
+
+}
+ 
+
+.form-panel { 
+    cursor:pointer;
+& i{
+    color:$primary; 
+    font-size:20px;
+     
+}
+&:hover{ background:$faint; }
+&:hover i{ color:lighten($secondary,10%); }
+}
+
+.-mt{ 
+    margin-top:22px;
+    // @include media(1024px){
+    //     margin-top:-46px;
+    // }
+
+}

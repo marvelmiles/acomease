@@ -1,0 +1,133 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+
+// .notification__header{
+//     position:relative;
+//   // padding:10px;
+//   //color:white !important;
+
+//   height:80px;
+//   background:$faint;
+//   transition:height 1s;
+// }
+
+// .notification__overlay{
+//  width:100%;
+//  //background:red ;
+//     z-index:20;
+//     height:100%;
+//     display:flex;
+//     justify-content: space-between;
+//     align-items:flex-start;
+//     transition:align-items 1s;
+// // background:#cce;
+
+//   &-content{
+//      margin:5px !important;
+//     }
+    
+//      //align-items:flex-end;
+// }
+
+
+//  h5{
+//      position:absolute;
+//      left:50%;
+//      transform:translateX(-50%);
+//      bottom:0;
+//     z-index:50;
+    
+
+// }
+
+// .notfication_header{
+//     position:fixed;
+//     height:60px;
+//     transition:height 1s;
+// }
+
+// .notfication_overlay{
+//     width:100%;
+//     //background:red ;
+//        z-index:20;
+//        height:100%;
+//        display:flex;
+//        justify-content: space-between;
+//        align-items:flex-end;
+//        transition:align-items 1s;
+
+       
+//   & .notification__overlay-content{
+//     margin:5px !important;
+//    }
+
+// }
+
+
+
+.notification__header{
+position:relative;    
+width:100%;
+padding:0;
+//background:$faint;
+height:auto;
+ }
+
+.notification__overlay{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+   width:calc(100% - 20px);
+   //align-self:flex-end;
+    & div{
+        display:flex;
+        & > h5 { margin-left:10px; }
+    }
+
+    &-content{ margin:5px; }
+
+}
+
+
+.notification__container{
+    height:calc(100vh - 30px);
+    border:2px solid red;
+    overflow:scroll;
+   
+}
+
+.noti-hr{
+    margin-top:-0px;
+}
+
+
+
+.notification__body{
+    display:flex;
+    justify-content:space-between;
+    height:280px;
+    padding:10px;
+    overflow:hidden;
+    background:transparent;
+    transition:background .8s;
+    &:hover{
+        background:$faint;
+        cursor:pointer;
+        transition:background .8s;
+    }
+}
+ 
+.notification__content {
+
+    margin-left:5px;
+}
+
+
+//empty notifications
+
+.no-notifications{
+    width:280px;
+    @include media(411px){
+        width:400px;
+    }
+}

@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+
+
+.active-settings{
+    background:$secondary;
+    border-right:5px solid lighten($primary,5%) ;
+    color:#fff;
+    transition:all linear .6s;
+}
+
+.header,.side-panel{
+    margin-bottom:-15px;
+    padding-top:10px;
+}
+
+
+
+.header{
+    background:#fff;
+     
+}
+
+//.bg-faint { background:$faint; }
+ .side-panel{
+   
+&:hover{
+    background:$secondary;
+    color:#fff;
+    cursor:pointer;
+ 
+}
+& i{
+    color:$primary;
+    font-size:20px;   
+}
+&:hover i{ color:lighten($secondary,10%); }
+ } 

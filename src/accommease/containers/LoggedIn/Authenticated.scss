@@ -1,0 +1,312 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+  
+ 
+.overlay__container{
+
+    position:relative;
+    background: #0f0c29;  /* fallback for old browsers */ //lawrencium
+background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//  background-image: url('../../assests/images/apartment.jpg');
+    background-attachment: fixed;
+   // background-position:center;
+    background-size: cover;
+    width:100%; height:320px;
+  margin-top:58px;
+
+  @include media($width:640px){
+      height:100vh;
+  }
+
+  @include media($width:768px){
+      height:500px;
+  }
+
+    & .content{
+        position:absolute;
+        top:25%;
+        margin-left:10px;
+
+        @include media($width:768px){
+            top:50%;
+            transform:translateY(-50%);
+            margin-left:20px;
+        }
+    }
+    
+   & .view-page{
+       @include positioned-center($left:10px,$x:0); 
+       width:280px;
+
+       & a{
+           text-decoration:none;
+           color:#fff;
+       }
+
+       @include media(640px){
+        width:400px;
+    }
+   
+    }
+
+}//EOF overlay
+
+
+ .text-note { 
+    width:280px;
+    color:#fff;
+
+    @include media(640px){
+        width:330px;
+    }
+
+    & .hr{ 
+        width:80%;
+        background:$primary !important;
+        height:1px;
+        border-radius:5px;
+     
+        & div  { background:$secondary !important; height:1px ; width:20%; }
+         
+    }
+ }
+
+ .explore{
+     padding-top:50px;
+ };
+
+ .explore-rent-left{
+     display:flex; flex-direction:row;
+     width:100%; overflow-x:auto;
+      
+     @include media(768px){
+         flex-direction:column;
+     }
+     & .text-note{
+         min-width:300px;
+     }
+
+ }
+
+ .explore-rent-right{
+     height:280px * 2.5;
+     transform:scale(0.8);
+    @include media(768px){
+        transform:scale(0.7);
+        margin-top:-60px;
+    }
+ }
+ 
+
+.explore-lodges-left{ 
+   display:none;
+   width:0;
+
+   @include media($width:768px){
+     display:block;
+     width:30%;
+     padding:15px;
+
+        & > .text-note{
+        width:210px;
+       padding:5px;
+    }
+
+   }
+    
+    @include media($width:992px){
+      //  border:2px solid red !important;
+       width:30%;
+         
+    }
+
+    @include media($width:1024px){
+       & > .text-note {width:290px;}
+    }
+ 
+
+    @include media($width:1200px){
+         width:300px;
+         padding:0;         
+         & > .text-content{
+             width:200px !important;
+         }
+    } 
+
+   
+}
+
+
+.explore-lodges-right{
+  //border:2px solid green;    
+    width:100%;
+    padding-top:15px;
+    //padding:10px;
+     height:280px * 1.5;
+    overflow-y:auto;
+    overflow-x:hidden;
+    box-sizing:border-box;
+
+  @include scrollBar;
+  
+    @include media($width:768px){
+        width:70%;
+        height:280px * 3 !important;
+    }
+
+     
+   
+    @include media($width:1200px){
+        width:calc(100% - 300px);
+         }
+} 
+ 
+
+ 
+
+
+.card__wrapper{
+    width:280px;
+    height:280px;
+    margin:0 auto;
+    //border:2px solid green;
+
+    @include media($width:768px){
+        width:260px;
+        }
+
+        @include media($width:1024px){
+            width:300px;
+            padding-top:20px;
+        }
+    }
+ 
+//fancy blue listing
+
+
+
+.l-wrapper{
+  width:calc(100% - 10px);
+  height:auto;
+  margin:0;
+  padding:0;
+  margin-top:10px;
+//  border:5px solid green;
+   
+}
+
+.l-container{
+  position:relative;
+  height:230px;
+
+
+  //border:2px solid red;
+
+
+  & > button.btn{
+    position:absolute;
+  bottom:0;
+  background:$primary !important;
+  border:none !important;
+  transition:all .6s;
+   &:focus{
+     background:none !important;
+     border:2px solid $primary !important;
+     transition:all .6s;
+   }
+  }
+}
+
+.l-img-container{
+  width:100%;
+  height:100%; 
+ 
+  & > img {
+    width:100%; height:100%;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+}
+
+.l-body{
+  width:100%;
+  height:100px;
+  //border:4px solid yellow;
+  position:relative; 
+  z-index:200;
+}
+
+.l-body-img-cont{
+  position:absolute;
+  width:80px;
+  height:80px;
+  border-radius:50%; 
+ right:-4px;
+ top:  -60px;
+//  right:-2px;
+//  top:-50px;
+  & img{
+    width:inherit;
+    height:inherit;
+    border-radius:inherit;
+  }
+}
+
+.l-btn-group{
+width:100%;
+// position:absolute;
+// bottom:0;
+ 
+//background:blue !important;
+& button.btn{
+  width:100px !important;
+  color:$primary;
+  background:transparent !important;
+  border:1px solid $primary; 
+  & > i{
+     color:$primary;
+     margin-right:5px;
+   }
+}
+  
+}
+
+.l-text{
+  width:100%;
+    & > .l-name-space{
+    width:100%;
+    display:flex;
+    & h6{ margin-left:4px; align-items:flex-start;}
+    
+
+  }
+}
+
+
+
+.la-wrapper{
+  min-width:320px;
+  //border:5px solid red !important;
+  height:auto;
+  margin:0;
+  padding:0;
+  margin-top:10px;
+//  border:5px solid green;
+   
+}
+ 
+
+// SECTION TOP NOTCH
+
+.category{
+    & h5 { margin-top:30px; margin-left:10px; }
+   
+    & .card-row{
+     @include cardRow;
+    
+     }
+}
+
+
+ 

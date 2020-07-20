@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+
+.banner{
+    
+    background:$tertiary;
+    color:$secondary;
+    margin-top:45px;
+    text-align:center;
+   height:320px;
+   padding:15px;
+   display: flex; justify-content: center; align-items: center;
+   & div{ max-width:800px;}
+   
+}
+
+.location-sub-img-container img{
+    width:100px;
+    height:60px;
+    margin:10px;
+}
+ 

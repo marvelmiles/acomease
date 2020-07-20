@@ -1,0 +1,96 @@
+ @import '../../styles/queries';
+ @import '../../styles/variables';
+  
+// blue fancy listing 
+
+
+
+// .l-wrapper{
+//   width:320px;
+//   height:auto;
+//   //border:5px solid green;
+
+// }
+
+// .l-container{
+//   position:relative;
+//   height:230px;
+
+//   //border:2px solid red;
+
+
+//   & > button.btn{
+//     position:absolute;
+//   bottom:1px;
+//   background:$primary !important;
+//   border:none !important;
+//   transition:all .6s;
+//    &:focus{
+//      background:none !important;
+//      border:2px solid $primary !important;
+//      transition:all .6s;
+//    }
+//   }
+// }
+
+// .l-img-container{
+//   width:100%;
+//   height:100%; 
+ 
+//   & > img {
+//     width:100%; height:100%;
+//     border-top-left-radius:5px;
+//     border-top-right-radius:5px;
+//   }
+// }
+
+// .l-body{
+//   width:100%;
+//   height:100px;
+//   //border:4px solid yellow;
+//   position:relative; 
+//   z-index:200;
+// }
+
+// .l-body-img-cont{
+//   position:absolute;
+//   width:80px;
+//   height:80px;
+//   border-radius:50%;
+//   border:5px solid $primary;
+//  right:5px;
+//  top:-60px;
+//   & img{
+//     width:inherit;
+//     height:inherit;
+//     border-radius:inherit;
+//   }
+// }
+
+// .l-btn-group{
+// width:100%;
+// position:absolute;
+// bottom:0;
+ 
+// //background:blue !important;
+// & button.btn{
+//   width:100px !important;
+//   color:$primary;
+//   background:transparent !important;
+//   border:1px solid $primary; 
+//   & > i{
+//      color:$primary;
+//      margin-right:5px;
+//    }
+// }
+  
+// }
+
+// .l-text{
+//   width:100%;
+//     & > .l-name-space{
+//     width:100%;
+//     display:flex;
+//     & h6{ margin-left:4px;}
+//   }
+// }

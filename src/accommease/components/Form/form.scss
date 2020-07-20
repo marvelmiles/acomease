@@ -1,0 +1,263 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+
+
+//not sure you are needed
+.w-res{
+     width:80%;
+     margin:0 auto;
+  transform:scale(0.7) !important;
+
+    @include media($width:768px){
+        max-width:500px;
+    }
+}
+
+
+.form-container{
+   // border:2px solid red;
+   @include positioned-center;
+    width:90%;
+    height:auto;
+    max-width:600px; 
+  padding:10px;
+}
+
+.form-sl{
+   // margin-top:120px !important;
+   width:95%;
+   margin:0 auto;
+   height:auto;
+   max-width:600px; 
+ padding:10px;
+ transform:scaleY(0.95);
+   // border:2px solid red;
+    
+}
+
+.form-feedback{ margin-left:12px; }
+
+.custom-input{ box-shadow:none!important; }
+
+
+.select-input{
+    width:100%;
+    border-radius:25px !important;
+    border:2px solid var(--primary) !important;
+    height:50px !important;
+    outline:none !important;
+    box-shadow:none !important;
+    transition:transform 0.4s linear;
+  }
+
+  .select-collapse{
+    height:200px;
+    overflow-y:scroll;
+    position:absolute !important;
+    z-Index:500;
+    @include scrollBar;
+ 
+  }
+
+  .caret{
+      width:20px;height:30px;
+      cursor:pointer;
+      margin-right:10px;
+  }
+ 
+  .select-item:hover{
+  background:$primary;
+  color:#fff;
+  }
+
+  
+  .r{
+    right:0;
+}
+
+.form-control{ box-shadow:none !important;font-weight:10;outline:none!important; &:focus{  border-color:none !important; } }
+
+.input-radius, .landlord-form-input,.renter-form-input{
+    box-shadow:none !important;
+    border-radius:32px !important;
+    font-weight:10 !important;
+   border-color:none;
+    &:focus{   border-color:none !important; }
+}
+ 
+.renter-form,.landlord-form{
+   display:none;
+   height:auto; 
+    transition:all 0.25s linear;
+}
+
+#a-opt:checked ~ .landlord-form , #b-opt:checked ~ .renter-form{
+display:block;
+}
+
+  
+.form-brand-conta,.form-brand{
+    width:120px;
+    height:120px;
+ margin:0 auto;
+  
+ //border:2px solid red;
+    & > img{
+        width:inherit;
+        height:inherit;
+  background:transparent !important;
+    }
+}
+
+.form-brand-conta{ margin-bottom:-30px; }
+ 
+.radio-tab{
+    position:relative;
+    margin-top:-20px;
+
+    @include media(640px){
+        margin-top:0;
+    }
+
+    & hr{
+        margin-top:80px;
+
+        @include media(640px){
+            margin-top:20px;
+        }
+    }
+}
+
+#b-opt:checked ~ .renter-form{
+    height:auto;
+    }
+ 
+.radio-btn {
+   // position: absolute;
+    opacity:0;
+    visibility:visible;
+    &:checked + .radio-label {
+        color: $primary;
+        background:$faint;
+        border:1px solid $secondary;
+        &::before {
+            margin-right: 2rem;
+            border: 0.5rem solid $primary;
+            background: $secondary;
+        }
+         
+    }
+ }
+
+ #b-opt-label{
+ position:absolute;
+ right:0;
+
+ }
+ 
+ .radio-label {
+     padding-top:15px;
+    padding-left:10px;
+   height:60px;
+   width:100%;
+    color:$secondary;
+    border-radius:5px;
+    border:1px solid $secondary;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    @include media(640px){
+        width:calc(50% - 20px);
+    }
+    
+    &:hover{
+        color:$primary;
+        border:1px solid $primary;
+       &::before{
+        border: 0.5rem solid $primary;
+           margin-right:2rem;
+       } 
+   }
+ }
+ 
+ .radio-label::before {
+    display: inline-block;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+    margin-right: 0.625rem;
+  border: 0.5rem solid $secondary;
+    border-radius: 50%;
+    transition: all 0.25s linear;
+ }
+ 
+ 
+// input{
+//     font-size:20px !important;
+// }
+.p-center{ @include positioned-center; }
+ 
+.error{
+    border: 1px solid red !important;
+}
+
+
+
+
+// SETTINGS FROM STYLES
+ 
+ 
+.settings-form-input {outline:none !important; color:$primary!important; 
+     border:none !important; padding:20px !important; 
+      box-shadow:none!important; margin-bottom:-16px;
+    
+    }
+
+.settings-btn {
+     @include btn-scaled($width:map-get($width,'w-120'));
+     float:right; border:none; outline:none!important; box-shadow:none!important; padding:8px; 
+     &:active{ @include btn-scaled($focused:true,$width:map-get($width,'w-120')); }
+    }
+
+.settings-form-group { position: relative; top:20px; }
+
+.settings-form-group label { position:absolute; top:-10px; pointer-events:none; left:10px; color:$secondary; transition:.5s all linear; }
+
+.settings-form-input:focus ~ label {
+    top:-15px; left:0; color:$primary; font-size:12px; font-weight:bold;
+}
+
+.checkbox-1x {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    cursor:pointer !important;
+  
+}
+.checkbox-2x {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    cursor:pointer !important;
+}
+
+.custom-control-input:focus~.custom-control-label::before
+{
+  box-shadow:none!important;
+}
+
+// .custom-control-lg .custom-control-label::before,
+// .custom-control-lg .custom-control-label::after {
+//     top: 0.1rem !important;
+//     left: -2rem !important;
+//     width: 1.25rem !important;
+//     height: 1.25rem !important;
+// }
+
+// .custom-control-lg .custom-control-label {
+//     margin-left: 0.5rem !important;
+//     font-size: 1rem !important;
+// }
+
+
+// EOF SETTINGS FORM STYLES
+
+.disabled{ opacity:0.4; cursor:not-allowed !important; }

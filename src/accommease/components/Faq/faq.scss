@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+
+
+// fqa used by landing page
+
+#faq{
+margin:20px;
+padding-bottom:20px;
+& h5{  margin:10px 0;}
+   }
+   
+   .faq-img-cont{
+       width:80%;
+       margin:0 auto;
+       text-align:center;
+   
+   }
+   
+   .faq-text{
+       
+       width:80%;
+       margin:0 auto;
+       text-align:justify;
+       margin-bottom:15px;
+       height:240px;
+       overflow:auto;
+       @include scrollBar;
+       @include media(768px){
+           height:180px;
+       } 
+   }
+   
+   .faq-arrow{
+   position:absolute; right:50px; bottom:10px;
+   transition:all.4s;
+   }
+   
+   .faq-wrapper{
+      // position:relative;
+      //margin:20px;
+       height:auto; padding:25px 0;
+       @include media(1024px){
+           padding:25px;
+       }
+    
+
+       &:hover  .faq-arrow{
+     right:25px;
+     transition:all.4s;
+       }
+   }
+   
+  // .faq-col {  max-width:600px !important; }
+   

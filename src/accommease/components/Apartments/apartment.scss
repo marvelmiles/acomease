@@ -1,0 +1,79 @@
+@import '../../styles/variables';
+@import '../../styles/queries';
+  
+.desc-cont{
+    padding:10px 0;
+    margin:15px 0;
+
+    @include media(768px){
+        margin:0;
+    }
+
+}
+
+.desc-content{
+    height:auto;
+    max-height:420px;
+    overflow:auto;
+   text-align:justify;
+// styling scroll bar
+@include  scrollBar;
+   
+  
+}
+
+.desc-footer{
+  
+    & button { border:none; }
+}
+
+ 
+ .desc-header h4 {
+  margin-bottom:-2px !important;
+ }
+
+
+
+ // atributes styles
+
+ .attributes-row{
+    //  border:2px solid $secondary;
+    margin-top:20px;
+    height:auto;
+    max-height:320px;
+    overflow-y:auto;
+    @include scrollBar;
+}
+
+ .attributes ul{
+   list-style:none;
+   margin-bottom:40px;
+     
+   & li {
+    margin:10px 0;
+   }
+
+   
+   & li.attribute-lead{
+    color:$secondary;
+//    margin-bottom:10px;
+    font-weight:bold;
+}
+
+ }
+ 
+
+//  .area-lodges{
+
+//      border:2px solid green;    
+//           width:100%;
+//          // padding-top:15px;
+//           //padding:10px;
+//            height:280px * 1.5;
+//           overflow-y:auto;
+//           overflow-x:hidden;
+//           box-sizing:border-box;
+      
+//         @include scrollBar;
+
+//  }
