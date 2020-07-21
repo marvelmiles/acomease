@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/acomease/static/css/main.0b45bea2.chunk.css",
-    "main.js": "/acomease/static/js/main.73cdc1c9.chunk.js",
-    "main.js.map": "/acomease/static/js/main.73cdc1c9.chunk.js.map",
+    "main.js": "/acomease/static/js/main.19023b93.chunk.js",
+    "main.js.map": "/acomease/static/js/main.19023b93.chunk.js.map",
     "runtime-main.js": "/acomease/static/js/runtime-main.67ecb0d3.js",
     "runtime-main.js.map": "/acomease/static/js/runtime-main.67ecb0d3.js.map",
     "static/css/2.af3c1da9.chunk.css": "/acomease/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.56728148.chunk.js": "/acomease/static/js/2.56728148.chunk.js",
-    "static/js/2.56728148.chunk.js.map": "/acomease/static/js/2.56728148.chunk.js.map",
+    "static/js/2.fd7bbf68.chunk.js": "/acomease/static/js/2.fd7bbf68.chunk.js",
+    "static/js/2.fd7bbf68.chunk.js.map": "/acomease/static/js/2.fd7bbf68.chunk.js.map",
     "static/js/3.b60a2c36.chunk.js": "/acomease/static/js/3.b60a2c36.chunk.js",
     "static/js/3.b60a2c36.chunk.js.map": "/acomease/static/js/3.b60a2c36.chunk.js.map",
     "index.html": "/acomease/index.html",
-    "precache-manifest.3f247783010e176210dca1432fd82241.js": "/acomease/precache-manifest.3f247783010e176210dca1432fd82241.js",
+    "precache-manifest.1fbd8fbde835629b38ac36d0c0009532.js": "/acomease/precache-manifest.1fbd8fbde835629b38ac36d0c0009532.js",
     "service-worker.js": "/acomease/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/acomease/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.0b45bea2.chunk.css.map": "/acomease/static/css/main.0b45bea2.chunk.css.map",
-    "static/js/2.56728148.chunk.js.LICENSE.txt": "/acomease/static/js/2.56728148.chunk.js.LICENSE.txt",
+    "static/js/2.fd7bbf68.chunk.js.LICENSE.txt": "/acomease/static/js/2.fd7bbf68.chunk.js.LICENSE.txt",
     "static/media/AM_UIx.png": "/acomease/static/media/AM_UIx.b08f0047.png",
     "static/media/Icon material-add-a-photo.svg": "/acomease/static/media/Icon material-add-a-photo.974bcc67.svg",
     "static/media/Listings@2x.png": "/acomease/static/media/Listings@2x.35caedbc.png",
@@ -69,8 +69,8 @@
   "entrypoints": [
     "static/js/runtime-main.67ecb0d3.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.56728148.chunk.js",
+    "static/js/2.fd7bbf68.chunk.js",
     "static/css/main.0b45bea2.chunk.css",
-    "static/js/main.73cdc1c9.chunk.js"
+    "static/js/main.19023b93.chunk.js"
   ]
 }
